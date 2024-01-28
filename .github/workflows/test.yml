@@ -36,7 +36,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           PR_BODY="${{ github.event.pull_request.body }}"
-          if [[PR_BODY != *"CHECK"* ]]; then
+          if [[ PR_BODY != *"CHECK"* ]]; then
             echo "PRにCHECKが含まれていません"
             exit 1
           fi
